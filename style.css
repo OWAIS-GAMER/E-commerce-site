@@ -1,0 +1,262 @@
+/* ===== BASE ===== */
+html, body {
+  overflow-x: hidden;
+}
+
+.crosal {
+  background-color: #F8F8F8;
+}
+
+.cursive {
+  font-family: 'Cedarville Cursive', cursive;
+}
+
+.sale {
+  font-family: 'Cedarville Cursive', cursive;
+  font-size: 30px;
+  margin: 0 0 -8px 0;
+}
+
+.c-heighlight {
+  font-size: 50px;
+  margin: 0;
+}
+
+.bg-light-blue  { background-color: #e8f4ff; }
+.bg-light-green { background-color: #e6f9ec; }
+.bg-light-dark  { background-color: #444444; }
+
+/* Carousel controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+  background-color: transparent !important;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Carousel indicators */
+.carousel-indicators [data-bs-target] {
+  background-color: #333;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  opacity: 0.7;
+  border: none;
+}
+.carousel-indicators .active {
+  background-color: #fff;
+  opacity: 1;
+}
+
+/* ===== TOP ALERT BAR ===== */
+@media (max-width: 575.98px) {
+  .alert .container-fluid {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  .alert small { display: block; }
+}
+
+/* ===== NAVBAR ===== */
+.navbar .navbar-brand {
+  font-size: 1.4rem !important;
+}
+
+.navbar form {
+  max-width: 500px;
+  width: 100%;
+  margin-top: 0 !important;
+}
+
+@media (max-width: 991.98px) {
+  .navbar .container-fluid {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .navbar form {
+    order: 3;
+    flex-basis: 100%;
+    margin: 0.5rem 0 0 0 !important;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .navbar .navbar-brand {
+    font-size: 1.15rem !important;
+  }
+  .navbar .d-flex.gap-3 {
+    gap: 0.5rem !important;
+  }
+}
+
+/* ===== CAROUSEL SLIDES ===== */
+/* Desktop: images fit their column */
+.crosal img {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+/* Mobile: stack text and image cleanly, no flex-column-reverse hacks */
+@media (max-width: 767.98px) {
+  .crosal {
+    padding: 1rem !important;
+    margin: 0.5rem !important;
+    border-radius: 1rem !important;
+  }
+
+  /* Image column appears first on every slide */
+  .crosal .col-12.col-md-5 { order: -1; }
+
+  .crosal img {
+    max-height: 240px;
+    margin-bottom: 0.75rem;
+  }
+
+  .crosal .col-12 {
+    text-align: center;
+  }
+
+  .sale        { font-size: 22px; }
+  .c-heighlight{ font-size: 30px; }
+  .crosal .fs-3{ font-size: 1.2rem !important; }
+  .crosal .fs-1{ font-size: 1.6rem !important; }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .c-heighlight { font-size: 38px; }
+  .sale         { font-size: 24px; }
+}
+
+/* ===== GRID SECTION (big + 3 small images) ===== */
+
+/* Big image — fill column height on desktop only */
+.grid-big-img {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+/* Small grid + rectangle images — natural height, no forced px */
+.grid-small-img,
+.grid-rect-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+/* Mobile adjustments */
+@media (max-width: 767.98px) {
+  .container-fluid.px-5 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .grid-big-img {
+    min-height: 240px;
+    height: 240px;
+  }
+
+  .grid-small-img { height: 130px; }
+  .grid-rect-img  { height: 130px; }
+
+  /* Overlay text — smaller and less padding on phones */
+  .position-absolute h3,
+  .position-absolute h4,
+  .position-absolute h5 {
+    font-size: 0.95rem !important;
+  }
+  .position-absolute p {
+    font-size: 0.7rem !important;
+  }
+  .position-absolute .btn {
+    font-size: 0.7rem !important;
+    padding: 0.2rem 0.6rem !important;
+  }
+}
+
+/* ===== PRODUCT CARDS ===== */
+.card-img-top {
+  height: 220px;
+  object-fit: cover;
+}
+
+@media (max-width: 575.98px) {
+  .card-img-top { height: 160px; }
+}
+
+/* ===== PROMO BANNERS (Sunglasses / Footwear / Suits) ===== */
+.promo-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 767.98px) {
+  .promo-img { height: 220px; }
+  .position-relative h3.fs-2 {
+    font-size: 1.25rem !important;
+  }
+  .position-relative .small {
+    font-size: 0.8rem !important;
+  }
+}
+
+/* ===== FOOTER ===== */
+@media (max-width: 767.98px) {
+  footer .col-md-4 { text-align: center; }
+  footer .d-flex.gap-3 { justify-content: center; }
+}
+
+/* ===== MODALS ===== */
+@media (max-width: 575.98px) {
+  .modal-dialog { margin: 0.5rem; }
+}
+
+/* ===== GRID SECTION — MOBILE OVERLAY FIX ===== */
+@media (max-width: 767.98px) {
+  /* Small grid images need enough height for overlay text */
+  .grid-small-img {
+    height: 180px;
+  }
+
+  .grid-rect-img {
+    height: 150px;
+  }
+
+  /* Shrink overlay text so it fits on narrow images */
+  .grid-overlay h5 {
+    font-size: 0.95rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  .grid-overlay p {
+    font-size: 0.72rem !important;
+  }
+
+  .grid-overlay h4 {
+    font-size: 1.05rem !important;
+  }
+
+  .grid-overlay .btn {
+    font-size: 0.68rem !important;
+    padding: 0.15rem 0.55rem !important;
+    margin-top: 0.25rem !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Reduce top padding of overlay so text isn't pushed down */
+  .grid-overlay {
+    padding-top: 1rem !important;
+  }
+}
